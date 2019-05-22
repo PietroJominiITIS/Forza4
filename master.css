@@ -1,0 +1,39 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#playField {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 350px;
+}
+
+div.column {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 48px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+div.cells {
+  height: 48px;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  transition: all .3s ease;
+}
+
+div.red {
+  background-color: red;
+}
+
+div.blue {
+  background-color: blue;
+}
