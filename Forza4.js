@@ -65,16 +65,20 @@ class Forza4 {
       for (let y = 0; y < this.height - 3; y++)
         if (document.getElementById('x' + x + 'y' + (y + 1)).className.indexOf(player) > 0 && document.getElementById('x' + x + 'y' + (y + 2)).className.indexOf(player) > 0 && document.getElementById('x' + x + 'y' + (y + 3)).className.indexOf(player) > 0 && document.getElementById('x' + x + 'y' + y).className.indexOf(player) > 0) return player;
 
-
     // horizontal
     for (let x = 0; x < this.width - 3; x++)
       for (let y = 0; y < this.height; y++)
         if (document.getElementById('x' + (x + 1) + 'y' + y).className.indexOf(player) > 0 && document.getElementById('x' + (x + 2) + 'y' + y).className.indexOf(player) > 0 && document.getElementById('x' + (x + 3) + 'y' + y).className.indexOf(player) > 0 && document.getElementById('x' + x + 'y' + y).className.indexOf(player) > 0) return player;
 
-    // diagonal
+    // diagonal /
     for (let x = 0; x < this.width - 3; x++)
       for (let y = 0; y < this.height - 3; y++)
         if (document.getElementById('x' + (x + 1) + 'y' + (y + 1)).className.indexOf(player) > 0 && document.getElementById('x' + (x + 2) + 'y' + (y + 2)).className.indexOf(player) > 0 && document.getElementById('x' + (x + 3) + 'y' + (y + 3)).className.indexOf(player) > 0 && document.getElementById('x' + x + 'y' + y).className.indexOf(player) > 0) return player;
+
+    // diagonal \
+    for (let x = 3; x < this.width; x++)
+      for (let y = 0; y < this.height - 3; y++)
+        if (document.getElementById('x' + (x - 1) + 'y' + (y + 1)).className.indexOf(player) > 0 && document.getElementById('x' + (x - 2) + 'y' + (y + 2)).className.indexOf(player) > 0 && document.getElementById('x' + (x - 3) + 'y' + (y + 3)).className.indexOf(player) > 0 && document.getElementById('x' + x + 'y' + y).className.indexOf(player) > 0) return player;
 
     return 'none';
   }
